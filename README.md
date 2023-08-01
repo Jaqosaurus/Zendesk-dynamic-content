@@ -1,5 +1,9 @@
 # Dynamic content creator for Zendesk
 
+## To run
+
+Hopefully.... with Go installed run `go run ./cmd` in the terminal from the top level directory.
+
 ## File format
 
 ### Config file
