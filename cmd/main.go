@@ -69,6 +69,8 @@ func main() {
 		err = postToZendesk(translationPayload, config)
 		if err != nil {
 			log.Error().Err(err).Msg(fmt.Sprintf("Error uploading translation to Zendesk: %s", translation.Name))
+		} else {
+			log.Info().Msgf("%s: Uploaded", translation.Name)
 		}
 	}
 }
