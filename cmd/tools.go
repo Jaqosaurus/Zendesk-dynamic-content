@@ -242,7 +242,7 @@ func postToZendesk(payload string, config config) ( error) {
 		return err
 	}
 
-	if res.StatusCode != 200 {
+	if !((res.StatusCode >= 200) && (res.StatusCode < 300)){
 		var errorResponse zendeskErrorResponse
 		var errorMessage string
 		err = json.Unmarshal([]byte(string(body)),&errorResponse)
